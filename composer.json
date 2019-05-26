@@ -10,9 +10,8 @@
 		"phpunit/phpunit": "6.1.*"
 	},
 	"autoload": {
-		"psr-0": {
-			"OSS_SNMP": "src/",
-			"Tests": "tests/"
+		"psr-4": {
+			"OSS_SNMP": "src/"
 		}
 	},
 	"minimum-stability": "dev"
