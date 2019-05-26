@@ -1,5 +1,5 @@
 {
-	"name": "opensolutions/oss-snmp",
+	"name": "urosg80/oss-snmp",
 	"description": "A PHP SNMP library for people who hate SNMP, MIBs and OIDs!",
 	"keywords": ["oss", "opensolutions", "snmp", "oss_snmp", "oss-snmp"],
 	"license": "BSD-3-Clause",
