@@ -6,13 +6,10 @@
         "require": {
         	"php": ">=5.4.0"
 	},
-	"require-dev": {
-		"phpunit/phpunit": "6.1.*"
-	},
-	"autoload": {
-		"psr-0": {
+  "autoload": {
+    "psr-0": {
 			"OSS_SNMP": "src/"
 		}
-	},
+  },
 	"minimum-stability": "dev"
 }
