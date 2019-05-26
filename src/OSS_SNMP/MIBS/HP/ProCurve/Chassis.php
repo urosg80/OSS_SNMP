@@ -45,6 +45,7 @@ class Chassis extends \OSS_SNMP\MIBS\Foundry
 {
 
     const OID_SERIAL_NUMBER          = '.1.3.6.1.4.1.11.2.36.1.1.2.9.0';
+	const OID_UPTIME				 = '.1.3.6.1.2.1.1.3.0';
 
 
     /**
@@ -56,4 +57,14 @@ class Chassis extends \OSS_SNMP\MIBS\Foundry
     {
         return $this->getSNMP()->get( self::OID_SERIAL_NUMBER );
     }
+
+	public function uptime()
+	{
+		$res = $this->getSNMP()->realWalk( self::OID_UPTIME );
+		$resString = array_shift($res);
+		$data = [];
+		preg_match("/^.*\((\d+)\).*$/", $resString, $data);
+		return (int)($data[sizeof($data)-1] / 100);
+	}
+
 }
